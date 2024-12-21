@@ -28,3 +28,13 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+    
+    App\Form\Extension\CartItemTypeExtension:
+        tags:
+            - { name: form.type_extension }
+        arguments:
+            $orderItemQuantityModifierLimit: '%sylius.order_item_quantity_modifier.limit%'
+    
+    App\EventSubscriber\JavaScriptHookSubscriber:
+        tags:
+            - { name: kernel.event_subscriber }

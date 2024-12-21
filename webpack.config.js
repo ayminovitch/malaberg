@@ -15,6 +15,7 @@ Encore
     .setOutputPath('public/build/app/shop')
     .setPublicPath('/build/app/shop')
     .addEntry('app-shop-entry', './assets/shop/entrypoint.js')
+    .addEntry('quantity-alert', './assets/shop/quantity-alert.js')
     .disableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
